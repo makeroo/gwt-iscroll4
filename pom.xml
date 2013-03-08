@@ -2,7 +2,6 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.cubiq</groupId>
   <artifactId>gwt-iscroll4</artifactId>
-  <packaging>war</packaging>
   <name>gwt-iscroll4</name>
   <description>GWT Wrapper for iScroll4</description>
   <url>https://github.com/makeroo/gwt-iscroll4</url>
@@ -37,27 +36,23 @@
   </properties>
 
   <build>
-
-    <plugins>
-      <plugin>
-      	<groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-war-plugin</artifactId>
-         <version>2.1.1</version>
-         <configuration>
-           <archiveClasses>true</archiveClasses>
-         </configuration>
-       </plugin>
-    </plugins>
+	<resources>
+	  <resource>
+	    <directory>src/main/resources</directory>
+	  </resource>
+	  <resource>
+	    <directory>src/main/java</directory>
+	  </resource>
+	</resources>
   </build>
-  <dependencies>
 
+  <dependencies>
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-user</artifactId>
       <version>${gwt.version}</version>
       <scope>provided</scope>
     </dependency>
-
   </dependencies>
 
   <distributionManagement>
