@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.cubiq</groupId>
+  <artifactId>gwt-iscroll4</artifactId>
+  <packaging>war</packaging>
+  <name>gwt-iscroll4</name>
+  <description>GWT Wrapper for iScroll4</description>
+  <url>https://github.com/makeroo/gwt-iscroll4</url>
+  <version>4.2.5.1-SNAPSHOT</version>
+  <inceptionYear>2013</inceptionYear>
+  <developers>
+    <developer>
+      <name>Simone Pierazzini</name>
+      <id>s.pierazzini</id>
+      <email>s.pierazzini@nextworks.it</email>
+      <organization>Nextworks</organization>
+    </developer>
+  </developers>
+  <scm>
+    <connection>git://github.com/makeroo/gwt-iscroll4.git</connection>
+    <url>git://github.com/makeroo/gwt-iscroll4.git</url>
+    <developerConnection>scm:git:https://github.com/makeroo/gwt-iscroll4.git</developerConnection>
+  </scm>
+  <organization>
+    <name>Nextworks</name>
+    <url>www.nextworks.it</url>
+  </organization>
+
+  <properties>
+    <gwt.version>2.5.0</gwt.version>
+
+  	<maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+  <build>
+
+    <plugins>
+      <plugin>
+      	<groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-war-plugin</artifactId>
+         <version>2.1.1</version>
+         <configuration>
+           <archiveClasses>true</archiveClasses>
+         </configuration>
+       </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>${gwt.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+  <distributionManagement>
+  	<repository>
+  		<id>nextworks-release</id>
+  		<url>http://mvn.nextworks.it/nexus/content/repositories/releases/</url>
+  	</repository>
+  	<snapshotRepository>
+  		<id>nextworks-snapshot</id>
+  		<url>http://mvn.nextworks.it/nexus/content/repositories/snapshots/</url>
+  	</snapshotRepository>
+  </distributionManagement>
+
+</project>
