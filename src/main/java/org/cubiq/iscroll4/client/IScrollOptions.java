@@ -3,6 +3,22 @@ package org.cubiq.iscroll4.client;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public final class IScrollOptions extends JavaScriptObject {
+	public interface ScrollEventHandler {
+		void onScrollEvent (/*JavaScriptObject event*/);
+	}
+
+	public native void setOnScrollMove (ScrollEventHandler h) /*-{
+		var me = this;
+
+		me.scrollMove = h;
+
+		if (this.onScrollMove == undefined) {
+			this.onScrollMove = function (iscr, e) {
+				me.scrollMove.@org.cubiq.iscroll4.client.IScrollOptions.ScrollEventHandler::onScrollEvent()();
+			};
+		}
+	}-*/;
+
 	protected IScrollOptions () { }
 
 	public native boolean isHScroll () /*-{

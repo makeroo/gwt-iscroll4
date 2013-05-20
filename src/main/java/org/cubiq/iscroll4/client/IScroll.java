@@ -13,6 +13,15 @@ public final class IScroll extends JavaScriptObject {
 		return new $wnd.iScroll(el, opts);
 	}-*/;
 
+	public native double getX () /*-{
+		return this.x;
+	}-*/;
+
+	public native double getY () /*-{
+	//$wnd.alert('getting scroll info: ' + this.x + ',' + this.y);
+		return this.y;
+	}-*/;
+
 	public native void destroy () /*-{
 		this.destroy();
 	}-*/;
