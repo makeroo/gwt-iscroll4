@@ -36,7 +36,8 @@ var m = Math,
 	isTouchPad = (/hp-tablet/gi).test(navigator.appVersion),
 
     has3d = prefixStyle('perspective') in dummyStyle,
-    hasTouch = 'ontouchstart' in window && !isTouchPad,
+    // modifica la rilevazione di hasTouch per renderla compatibile col touch panel
+    hasTouch = window.hardcodedConstants().forceMouse != true && 'ontouchstart' in window && !isTouchPad,
     hasTransform = vendor !== false,
     hasTransitionEnd = prefixStyle('transition') in dummyStyle,
 
