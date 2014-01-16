@@ -8,15 +8,20 @@ public final class IScrollOptions extends JavaScriptObject {
 	}
 
 	public native void setOnScrollMove (ScrollEventHandler h) /*-{
-		var me = this;
+		//var me = this;
 
-		me.scrollMove = h;
+		//me.scrollMove = h;
 
-		if (this.onScrollMove == undefined) {
+		//if (this.onScrollMove == undefined) {
 			this.onScrollMove = function (iscr, e) {
-				me.scrollMove.@org.cubiq.iscroll4.client.IScrollOptions.ScrollEventHandler::onScrollEvent()();
+				$wnd.console.log(
+					"iscroll scroll event: options=", this,
+					"handler=", h
+					
+				);
+				h.@org.cubiq.iscroll4.client.IScrollOptions.ScrollEventHandler::onScrollEvent()();
 			};
-		}
+		//}
 	}-*/;
 
 	protected IScrollOptions () { }
