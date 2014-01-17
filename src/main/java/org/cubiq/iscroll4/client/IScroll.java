@@ -1,6 +1,8 @@
 package org.cubiq.iscroll4.client;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.Scheduler;
+import com.google.gwt.core.client.Scheduler.ScheduledCommand;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -62,6 +64,15 @@ public final class IScroll extends JavaScriptObject {
 	public native boolean isReady () /*-{
 		this.isReady();
 	}-*/;
+
+	public void deferredRefresh () {
+		Scheduler.get().scheduleDeferred(new ScheduledCommand() {
+			@Override
+			public void execute () {
+				refresh();
+			}
+		});
+	}
 
 //	/**
 //	 * TODO: Don't know if options is "public" and modificable.
