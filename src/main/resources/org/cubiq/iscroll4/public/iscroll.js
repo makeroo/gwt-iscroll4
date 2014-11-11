@@ -698,6 +698,7 @@ iScroll.prototype = {
     
 		if (that.maxScrollY < 0) {
 			that.scrollTo(deltaX, deltaY, 0);
+			if (that.options.onScrollMove) that.options.onScrollMove.call(that, e);
 		}
 	},
 	
