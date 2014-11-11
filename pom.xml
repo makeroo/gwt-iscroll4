@@ -16,9 +16,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>git://github.com/makeroo/gwt-iscroll4.git</connection>
-    <url>git://github.com/makeroo/gwt-iscroll4.git</url>
-    <developerConnection>scm:git:https://github.com/makeroo/gwt-iscroll4.git</developerConnection>
+    <connection>scm:git:ssh://github.com/makeroo/gwt-iscroll4.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/makeroo/gwt-iscroll4.git</developerConnection>
+    <url>https://github.com/makeroo/gwt-iscroll4.git</url>
     <tag>HEAD</tag>
   </scm>
   <organization>
