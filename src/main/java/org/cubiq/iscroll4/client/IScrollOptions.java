@@ -19,6 +19,13 @@ public final class IScrollOptions extends JavaScriptObject {
 		//}
 	}-*/;
 
+	public native void setOnScrollEnd (IScrollEventHandler h) /*-{
+
+		this.onScrollEnd = function (e) {
+			h.@org.cubiq.iscroll4.client.IScrollEventHandler::onScrollEvent(Lorg/cubiq/iscroll4/client/IScroll;Lcom/google/gwt/dom/client/NativeEvent;)(this, e);
+		};
+	}-*/;
+
 	protected IScrollOptions () { }
 
 	public native boolean isHScroll () /*-{
